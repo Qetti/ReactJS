@@ -1,0 +1,42 @@
+.App h1 {
+    text-align: center;
+  }
+
+  .post{
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      background: rgba(136, 136, 136, 0.267);
+      width: 100%;
+      height: 10%;
+      margin: 0 auto 5px auto;
+  }
+
+  .post a {
+      color: darkviolet;
+      font-size: 17px;
+  }
+
+  .loading {
+      text-align: center;
+  }
+  .post-body{
+      margin: 0 auto;
+      width: 600px;
+      height: 151px;
+      display: block;
+      padding:15px;
+      font-size: 18px;
+      color: darkgreen;
+  }
+  .post-wrapper{
+      text-align: center;
+  }
+  .post-header{
+      text-align: center;
+      padding: 15px;
+      width: 600px;
+      margin: 5px auto;
+      color: rebeccapurple;
+  }
