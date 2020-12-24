@@ -1,31 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     html {font-size: 16px }
-    body {
-        overflow-x: hidden;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #555;
-      }
-      img{ max-width: 100%;}
-      ul , li {
-        padding: 0;
-        list-style: none;
-      }
-      a{
-          color: #009688;
-          text-decoration: none;
-          &:hover{
-           color: #26A69A;      
-          }
-      }
+
       *{
        box-sizing: border-box;
      }    
@@ -90,9 +66,6 @@ const GlobalStyle = createGlobalStyle`
         text-align: center;
         white-space: nowrap;
         vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         border: 1px solid #009688;
         padding: .5rem .75rem;
@@ -122,9 +95,6 @@ const GlobalStyle = createGlobalStyle`
         text-align: center;
         white-space: nowrap;
         vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         border: 1px solid #bbb;
         padding: .25rem .5rem;

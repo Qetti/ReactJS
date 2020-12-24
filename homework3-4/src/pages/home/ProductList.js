@@ -1,14 +1,20 @@
 import React, { Fragment } from "react";
 import ProductItem from "./ProductItem";
 import withContext from "../../withContext";
+import Fade from "react-reveal/Fade";
+
 
 const ProductList = props => {
   const { products } = props.context;
   return (
+
+    <Fade bottom cascade>
     <Fragment>
       <div className="hero is-primary">
         <div className="hero-body container">
-          <h4 className="title">ეგი ჩვენი პატალა მაღაზიაა</h4>
+          <Fade top cascade>
+          <h4 className="title">Shop Unique Plants Online</h4>
+          </Fade>
         </div>
       </div>
       <br />
@@ -32,6 +38,7 @@ const ProductList = props => {
         </div>
       </div>
     </Fragment>
+    </Fade>
   );
 };
 

@@ -7,13 +7,13 @@ import ProductList from './ProductList';
 class Home extends Component {
 
 	render(){
-        const title = "კატალოგი";
+        const title = "Catalog of Plants";
 			return (
 				<React.Fragment>
 
                 <DefaultLayout title={title} private>
                 <PublicHead title={title} />
-        		<nav className="main-nav">
+        		<nav>
           			<ul>
             			<li>
               				<Link to="/">{Home}</Link>

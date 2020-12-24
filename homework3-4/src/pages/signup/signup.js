@@ -6,6 +6,9 @@ import PublicHead from "../../components/publicHead";
 import DefaultLayout from "../../layouts";
 import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
+
+
 
 export class Signup extends Component {
   constructor(props) {
@@ -36,14 +39,15 @@ export class Signup extends Component {
   render() {
     const { loading } = this.props;
     const { email, password,repassword, submitted  } = this.state;
-    const title = "რეგისტრაცია";
+    const title = "Registration";
     return (
       <DefaultLayout title={title}>
         <PublicHead title={title} />
         <div className="form-box">
           <form name="form" onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="email">იმეილი</label>
+              <label htmlFor="email">Email</label>
+              <Fade left cascade>
               <input
                 type="email"
                 name="email"
@@ -51,12 +55,14 @@ export class Signup extends Component {
                 value={email}
                 onChange={this.handleChange}
               />
+              </Fade>
               {submitted && !email && (
-                <div className="error-block email">იმეილის შეყვანა აუცილებელია!</div>
+                <div className="error-block email">Please enter your email</div>
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="password">პაროლი</label>
+              <label htmlFor="password">password</label>
+              <Fade left cascade>
               <input
                 type="password"
                 name="password"
@@ -64,12 +70,14 @@ export class Signup extends Component {
                 value={password}
                 onChange={this.handleChange}
               />
+              </Fade>
               {submitted && !password && (
-                <div className="error-block password">პაროლის შეყვანა აუცილებელია!</div>
+                <div className="error-block password">Please enter password</div>
               )}
             </div>
               <div className="form-group">
-                  <label htmlFor="password">გაიმეორე პაროლი</label>
+                  <label htmlFor="password">Repeat Password</label>
+                  <Fade left cascade>
                   <input
                       type="password"
                       name="repassword"
@@ -77,19 +85,20 @@ export class Signup extends Component {
                       value={repassword}
                       onChange={this.handleChange}
                   />
+                  </Fade>
                   {submitted && !repassword && (
-                      <div className="error-block repassword">პაროლის გამეორება აუცილებელია!</div>
+                      <div className="error-block repassword">Repeating passwords is mandatory!</div>
                   )}
                   {submitted && repassword!==password && (
-                      <div className="error-block repassword">შეყვანილი პაროლები არ ემთხვევა</div>
+                      <div className="error-block repassword">Entered passwords do not match</div>
                   )}
               </div>
             <div className="form-group">
               <button className="form-btn" disabled={loading}>
-                  {loading ? <><i className="fas fa-spinner  fa-spin"/> მეიცა პაწია ხანს ...</> : "რეგისტრაცია"}
+                  {loading ? <><i className="fas fa-spinner  fa-spin"/>Please wait ...</> : "Registration"}
               </button>
             </div>
-              <span>უკვე გაქვს ანგარიში? <NavLink exact to='/login'> შესვლა</NavLink> </span>
+              <span>Already have an account? <NavLink exact to='/login'> Login </NavLink> </span>
           </form>
         </div>
       </DefaultLayout>

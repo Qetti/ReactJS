@@ -6,6 +6,8 @@ import PublicHead from "../../components/publicHead";
 import DefaultLayout from "../../layouts";
 import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
+
 
 export class Login extends Component {
   constructor(props) {
@@ -35,14 +37,15 @@ export class Login extends Component {
   render() {
     const { loading } = this.props;
     const { email, password, submitted  } = this.state;
-    const title = "შესვლა";
+    const title = "Login";
     return (
       <DefaultLayout title={title}>
         <PublicHead title={title} />
         <div className="form-box">
           <form name="form" onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="email">იმეილი</label>
+              <label htmlFor="email">Email</label>
+              <Fade left cascade>
               <input
                 type="email"
                 name="email"
@@ -50,12 +53,14 @@ export class Login extends Component {
                 value={email}
                 onChange={this.handleChange}
               />
+              </Fade>
               {submitted && !email && (
-                <div className="error-block  email">იმეილის შეყვანა აუცილებელია!</div>
+                <div className="error-block  email">Please enter your Email!</div>
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="password">პაროლი</label>
+              <label htmlFor="password">Password</label>
+              <Fade left cascade>
               <input
                 type="password"
                 name="password"
@@ -63,18 +68,19 @@ export class Login extends Component {
                 value={password}
                 onChange={this.handleChange}
               />
+              </Fade>
               {submitted && !password && (
-                <div className="error-block password">პაროლის შეყვანა აუცილებელია!</div>
+                <div className="error-block password">Please enter your Password!</div>
               )}
             </div>
             <div className="form-group">
               <button className="form-btn" disabled={loading}>
-                  {loading ? <><i className="fas fa-spinner  fa-spin"/> მეიცა პაწია ხანს ...</> : "შესვლა"}
+                  {loading ? <><i className="fas fa-spinner  fa-spin"/> Please Wait ...</> : "Sign in"}
               </button>
             </div>
-              <span>არ გაქვს ანგარიში? <NavLink exact to='/signup'> რეგისტრაცია</NavLink> </span>
+              <span>Not yet Registered? <NavLink exact to='/signup'> Registration</NavLink> </span>
           </form>
-        </div>
+        </div>          
       </DefaultLayout>
     );
   }

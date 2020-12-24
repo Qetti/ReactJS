@@ -22,7 +22,6 @@ export const HeaderContainer = styled.div`
     margin: 0;
     padding: 0;
     font-size: 1.5rem;
-    text-transform: uppercase;
   }
   .btn{
   position: absolute;
@@ -30,7 +29,6 @@ export const HeaderContainer = styled.div`
         transform: translateY(-50%);
       &.logout{   
         right: 10px;       
-
       }
       &.cart{    
         left: 250px;       

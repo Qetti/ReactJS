@@ -10,7 +10,7 @@ function* signupAttempt(action) {
     try {
         yield put(actions.loading( true));
         const response = yield call(service.makePostReq,{url:'/login',data:params});
-        alert('თქვენ წარმატებით დარეგისტრირდით! შეგიძლიათ შეხვიდეთ თქვენს გვერდზე :) ');
+        alert('You have successfully Registered! Please use your account :) ');
         store.dispatch(push("/login"));
     } catch (error) {
         yield put(actions.failure(true,error.response.data.error));

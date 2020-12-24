@@ -11,7 +11,7 @@ const NotFound =() =>  {
                 <TextWrapper>
                     <h1>404</h1>
                     <h2>Not Found</h2>
-                    <NavLink  exact  to='/'><i className="fas fa-arrow-left"/>მთავარ გვერდზე დაბრუნება</NavLink>
+                    <NavLink  exact  to='/'><i className="fas fa-arrow-left"/>Return to main page</NavLink>
                 </TextWrapper>
             </Wrapper>
         );

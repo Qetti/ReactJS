@@ -8,7 +8,7 @@ import CartComp from "./CartComp"
 class Cart extends Component {
 
 	render(){
-        const title = "თქვენი კალათა";
+        const title = "Your Cart";
 			return (
 				<React.Fragment> 
 

@@ -1,16 +1,18 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 const CartItem = props => {
   const { cartItem, cartKey } = props;
   const { product, amount } = cartItem;
   return (
+    <Fade bottom cascade>
     <div className=" column is-half">
       <div className="box">
         <div className="media">
           <div className="media-left">
             <figure className="image is-64x64">
               <img
-                src="https://bulma.io/images/placeholders/128x128.png"
+                src={product.imgUrl}
                 alt="product"
               />
             </figure>
@@ -21,7 +23,7 @@ const CartItem = props => {
               <span className="tag is-primary" style={{ marginLeft: "10px"}}>{product.price}₾</span>
             </b>
             <div>{product.shortDesc}</div>
-            <small>{`${amount} ცალი კალათაში`}</small>
+            <small>{`${amount} items in cart`}</small>
           </div>
           <div
             className="media-right"
@@ -32,6 +34,7 @@ const CartItem = props => {
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 

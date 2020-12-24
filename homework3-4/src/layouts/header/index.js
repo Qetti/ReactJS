@@ -27,14 +27,14 @@ const Header = props => {
             {props.btn
                 &&
                 <div className="btns">
-                <button className="btn main" onClick={handleMainPage}>კატალოგი</button>
+                <button className="btn main" onClick={handleMainPage}>Plants Catalog</button>
                 </div>
                 }
 
             {props.btn
                 &&
                 <div className="btns">
-                    <button className="btn cart" onClick={cartOpen}>კალათა</button>
+                    <button className="btn cart" onClick={cartOpen}>Cart</button>
                 </div>   
                 }
 
@@ -42,7 +42,7 @@ const Header = props => {
             {props.btn
                 &&
                 <div className="btns">
-                <button className="btn logout" onClick={handleLogOut}>გამოსვლა</button>
+                <button className="btn logout" onClick={handleLogOut}>Logout</button>
                 </div>
                 }
                 

@@ -21,5 +21,6 @@ export const TextWrapper = styled.div`
   h2{
     font-size: 2rem;
     line-height: 1;
+    margin-bottom: 20px;
   }
 `;

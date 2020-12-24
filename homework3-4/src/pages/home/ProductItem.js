@@ -1,15 +1,18 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
+
 
 const ProductItem = props => {
   const { product } = props;
   return (
+    <Fade bottom cascade>
     <div className=" column is-half">
       <div className="box">
         <div className="media">
           <div className="media-left">
             <figure className="image is-64x64">
               <img
-                src="https://bulma.io/images/placeholders/128x128.png"
+                src={product.imgUrl}
                 alt="product"
               />
             </figure>
@@ -17,12 +20,12 @@ const ProductItem = props => {
           <div className="media-content">
             <b >
               {product.name}
-              <span className="tag is-primary" style={{ marginLeft: "10px"}}>{product.price}₾</span>
+              <span className="tag is-primary" style={{ marginLeft: "10px"}}>{product.price}   €</span>
             </b>
             <div>{product.shortDesc}</div>
 
             {product.stock > 0 ? (
-              <small>{product.stock + " ცალი მარაგში"}</small>
+              <small>{product.stock + " Left In Stock"}</small>
             ) : (
               <small className="has-text-danger">აღარ არის მარაგშიიი</small>
             )}
@@ -37,13 +40,14 @@ const ProductItem = props => {
                   })
                 }
               >
-                კალათაში დამატება
+                Add to Cart
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 
