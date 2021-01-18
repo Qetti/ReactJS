@@ -1,0 +1,36 @@
+.todoList {
+    width: 57%;
+    margin: 0 auto;
+    position: absolute;
+    left: 21%;
+    animation: sun 0.2s linear;
+}
+
+div.todoList ul{
+    list-style: none;
+    text-align: left;
+    display: block;
+    margin:0;
+    border: 1px solid #ff00bf;
+}
+div.todoList ul li{
+    font-size: 15px;
+    display: block;
+    width:80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@keyframes sun {
+    0% {
+        display: none;
+        bottom: 0px;
+    }
+    50% {
+        display: block;
+        bottom: 250px;
+    }
+    100% {
+        bottom: 500px;
+    }
+}
