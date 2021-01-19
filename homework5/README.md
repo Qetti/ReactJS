@@ -1,3 +1,5 @@
+## დემო ვერსია: https://qettiquiz.netlify.app
+
 # რეგისტრაცია/ავტორიზაცია reqres-ით.
 
 ## login:
